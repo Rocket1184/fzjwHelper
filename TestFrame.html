@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Frame</title>
+</head>
+
+<body>
+	<select id="pjkc" onchange="javascript:changed('pjkc');">
+		<option value="lalala">a</option>
+		<option value="LBLBLB">B</option>
+		<option value="lclclc">c</option>
+		<option value="ldldld">d</option>
+	</select>
+	<table>
+		<tr>
+			<th></th>
+			<th>
+				<select name="" id="s1" onchange="javascript:changed('s1');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select>
+			</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td><select name="" id="s2" onchange="javascript:changed('s2');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><select name="" id="s3" onchange="javascript:changed('s3');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><select name="" id="s4" onchange="javascript:changed('s4');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><select name="" id="s5" onchange="javascript:changed('s5');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><select name="" id="s6" onchange="javascript:changed('s6');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><select name="" id="s7" onchange="javascript:changed('s7');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><select name="" id="s8" onchange="javascript:changed('s8');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><select name="" id="s9" onchange="javascript:changed('s9');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><select name="" id="s10" onchange="javascript:changed('s10');">
+					<option value=""></option>
+					<option value="">001</option>
+					<option value="">002</option>
+					<option value="">003</option>
+					<option value="">004</option>
+				</select></td>
+		</tr>
+		
+	</table>
+	<button class="button" id="Button1" onclick="javascript:btn1()">ClickMe!</button>
+
+	<script>
+		function changed(id) {
+			var el = document.getElementById(id);
+			var len = el.length;
+			for (j = 0; j < len; j++) {
+				if (el.options[j].selected) {
+					console.log("Select #", id, "index", j, "was selected.");
+					break;
+				}
+			}
+		}
+
+		function btn1() {
+			var MainSel = document.getElementById("pjkc");
+			var len = MainSel.length;
+			for (i = 0; i < len; i++) {
+				// console.log("looking up MainSel option",i);
+				if (MainSel.options[i].selected == true) {
+					MainSel.options[(i + 1) % len].selected = true;
+					// console.log("In MainSel, index",i,"was selected.");
+					break;
+				}
+			}
+			var Sels = document.getElementsByTagName("select");
+			for (i = 1; i < Sels.length; i++) {
+				Sels[i].options[0].selected = true;
+				// console.log("Reset Select:",i);
+			}
+		}
+	</script>
+
+</body>
+
+</html>
