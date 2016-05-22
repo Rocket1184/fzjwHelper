@@ -1,16 +1,16 @@
 # FZJW Helper
 [方正教务助手][link]，让繁琐的方正教务评教系统更易于使用。
 
-## 添加书签！
+### 添加书签！
 
 1. 将下面的 `代码` 作为 `网址` 添加到书签。
 
 	```JavaScript
-javascript: (function() {
-	var el = document.createElement('script');
-	el.setAttribute('type', 'text/javascript');
-	el.setAttribute('src','https://rawgit.com/Rocket1184/fzjwHelper/master/kcpj.js');
-	document.body.appendChild(el);
+	javascript: (function() {
+		var el = document.createElement('script');
+		el.setAttribute('type', 'text/javascript');
+		el.setAttribute('src','https://rawgit.com/Rocket1184/fzjwHelper/master/kcpj.js');
+		document.body.appendChild(el);
 	})();
 	```
 
@@ -18,7 +18,7 @@ javascript: (function() {
 
 3. 点击刚刚添加的书签。
 
-##如果不想添加书签...
+### 如果不想添加书签...
 
 1. 在 `教学评价` 页面，按下 `F12` 键。
 
@@ -27,7 +27,7 @@ javascript: (function() {
 3. 将刚才的 `代码` 复制到控制台的 `输入` 区，之后按下 `Enter` 键。
 
 
-## 使用方法：
+### 使用方法：
 
 - Firefox 用户：
 
@@ -59,6 +59,6 @@ javascript: (function() {
 
 - 其他浏览器，请自行测试。
 
-##Finally, Enjoy It!
+###Finally, Enjoy It!
 
 [link]: javascript:(function(){el=document.createElement('script');el.setAttribute('type','text/javascript');el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(el);})();
