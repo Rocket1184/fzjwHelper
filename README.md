@@ -3,7 +3,7 @@
 
 ## 添加书签！
 
-1. 将 [此链接](Rampage) 拖动到浏览器书签栏。
+1. 将 [此链接][link] 拖动到浏览器书签栏。
 
 2. 打开 `方正教务系统` ，进入 `教学评价` 页面。
 
@@ -50,4 +50,4 @@ javascript: void((function() {var element = document.createElement('script');ele
 
 ##Finally, Enjoy It!
 
-[Rampage]: javascript:void((function(){el=document.createElement('script');el.setAttribute('type','text/javascript');el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(el);})())
+[link]: javascript:void((function(){el=document.createElement('script');el.setAttribute('type','text/javascript');el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(el);})())
