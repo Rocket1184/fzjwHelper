@@ -3,7 +3,7 @@
 
 ## 添加书签！
 
-1. 将 [此链接][link] 拖动到浏览器书签栏。
+1. 将 [此链接][test] 拖动到浏览器书签栏。
 
 2. 打开 `方正教务系统` ，进入 `教学评价` 页面。
 
@@ -18,7 +18,12 @@
 3. 将 下面的内容 复制到控制台输入区，按下回车。
 
 ```JavaScript
-javascript: void((function() {var element = document.createElement('script');element.setAttribute('type', 'text/javascript');element.setAttribute('src', 'https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(element);})());
+javascript: (function() {
+	var el = document.createElement('script');
+	el.setAttribute('type', 'text/javascript');
+	el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');
+	document.body.appendChild(el);
+	})();
 ```
 
 ## 使用方法：
@@ -51,3 +56,5 @@ javascript: void((function() {var element = document.createElement('script');ele
 ##Finally, Enjoy It!
 
 [link]: javascript:void((function(){el=document.createElement('script');el.setAttribute('type','text/javascript');el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(el);})())
+
+[test]: http://github.com
