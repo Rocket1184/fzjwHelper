@@ -3,7 +3,7 @@
 
 ## 添加书签！
 
-1. 将 [此链接][test] 拖动到浏览器书签栏。
+1. 将 [此链接][link] 拖动到浏览器书签栏。
 
 2. 打开 `方正教务系统` ，进入 `教学评价` 页面。
 
@@ -21,7 +21,7 @@
 javascript: (function() {
 	var el = document.createElement('script');
 	el.setAttribute('type', 'text/javascript');
-	el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');
+	el.setAttribute('src','https://rawgit.com/Rocket1184/fzjwHelper/master/kcpj.js');
 	document.body.appendChild(el);
 	})();
 ```
@@ -40,22 +40,18 @@ javascript: (function() {
 
 - Chrome 用户：
 
- 没时间解释了，快上车！
+	没时间解释了，快上车！
  
- 按下 `确定` 按钮以开启 Rampage 模式。
+	按下 `确定` 按钮以开启 Rampage 模式。
  
- >Rampage 模式：全自动。默认中评，在评价一页之后自动跳转到下一页进行评价；循环往复直至全部评价结束。
+	>Rampage 模式：全自动。默认中评，在评价一页之后自动跳转到下一页进行评价；循环往复直至全部评价结束。
  
- >注意： Rampage 模式仍然不会自动提交评价。
+	>注意： Rampage 模式仍然不会自动提交评价。
  
- ~~我才不会说这样处理是因为 Chrome 的兼容性。。。。~~
- 
- 
- 
- - 暂时没有在其他浏览器上进行测试。
+	~~我才不会说这样处理是因为 Chrome 的 JS 引擎怎~~
+
+- 暂时没有在其他浏览器上进行测试。
 
 ##Finally, Enjoy It!
 
 [link]: javascript:void((function(){el=document.createElement('script');el.setAttribute('type','text/javascript');el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(el);})());
-
-[test]: javascript:alert('HelloMD');
