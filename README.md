@@ -51,10 +51,11 @@ javascript: (function() {
  ~~我才不会说这样处理是因为 Chrome 的兼容性。。。。~~
  
  
+ 
  - 暂时没有在其他浏览器上进行测试。
 
 ##Finally, Enjoy It!
 
 [link]: javascript:void((function(){el=document.createElement('script');el.setAttribute('type','text/javascript');el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(el);})())
 
-[test]: http://github.com
+[test]: javascript:alert("Hello MD")
