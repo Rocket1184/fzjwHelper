@@ -56,6 +56,6 @@ javascript: (function() {
 
 ##Finally, Enjoy It!
 
-[link]: javascript:void((function(){el=document.createElement('script');el.setAttribute('type','text/javascript');el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(el);})())
+[link]: javascript:void((function(){el=document.createElement('script');el.setAttribute('type','text/javascript');el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(el);})());
 
-[test]: javascript:alert("Hello MD")
+[test]: javascript:alert('HelloMD');
