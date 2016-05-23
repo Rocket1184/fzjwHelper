@@ -6,7 +6,7 @@ function Rooster() {
 		return;
 	}
 	else if (ua.indexOf("Chrome") > 0) {
-		console.log("chrome detacted!");
+		console.log("chrome detected!");
 		alert("Chrome 用户，请点击 “确定” 以开启 Rampage 模式！");
 		Rampage();
 		return;
