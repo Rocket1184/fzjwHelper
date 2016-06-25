@@ -39,4 +39,4 @@ for (i = 1; i <= len; i++) {
 gpa /= sumCrd;
 
 var title = iframe.getElementById('tbXsxx').rows[0].cells[0];
-title.innerText += '   平均绩点:' + gpa;
+title.innerText += '   平均绩点:' + gpa.toFixed(3);
