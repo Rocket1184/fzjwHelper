@@ -20,23 +20,27 @@ function CalcGP(g) {
 	}
 }
 
-var iframe = document.getElementById('iframeautoheight').contentDocument;
-var tbody = iframe.getElementsByTagName('tbody')[1];
-tbody.rows[0].cells[7].innerText += ' / 绩点';
+function CalcGPAAll() {
+	var iframe = document.getElementById('iframeautoheight').contentDocument;
+	var tbody = iframe.getElementsByTagName('tbody')[1];
+	tbody.rows[0].cells[7].innerText += ' / 绩点';
 
-var gpa = 0;
-var sumCrd = 0;
+	var gpa = 0;
+	var sumCrd = 0;
 
-var len = tbody.rows.length - 1;
-for (i = 1; i <= len; i++) {
-	var credit = parseFloat(tbody.rows[i].cells[6].innerText);
-	var g = CalcGP(tbody.rows[i].cells[7].innerText);
-	gpa += g * credit;
-	sumCrd += credit;
-	// console.log('credit,', credit, 'g,', g, tbody.rows[i].cells[7].innerText);
-	tbody.rows[i].cells[7].innerText += ' / ' + g;
+	var len = tbody.rows.length - 1;
+	for (i = 1; i <= len; i++) {
+		var credit = parseFloat(tbody.rows[i].cells[6].innerText);
+		var g = CalcGP(tbody.rows[i].cells[7].innerText);
+		gpa += g * credit;
+		sumCrd += credit;
+		// console.log('credit,', credit, 'g,', g, tbody.rows[i].cells[7].innerText);
+		tbody.rows[i].cells[7].innerText += ' / ' + g;
+	}
+	gpa /= sumCrd;
+
+	var title = iframe.getElementById('tbXsxx').rows[0].cells[0];
+	title.innerText += '   平均绩点:' + gpa.toFixed(3);
 }
-gpa /= sumCrd;
 
-var title = iframe.getElementById('tbXsxx').rows[0].cells[0];
-title.innerText += '   平均绩点:' + gpa.toFixed(3);
+CalcGPAAll();

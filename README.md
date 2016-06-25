@@ -1,6 +1,8 @@
 # FZJW Helper
 [方正教务助手][link]，让繁琐的方正教务评教系统更易于使用。
 
+## Part I 一键评教
+
 ### 添加书签！
 
 1. 将下面的 `代码` 作为 `网址` 添加到书签。
@@ -59,6 +61,35 @@
 
 - 其他浏览器，请自行测试。
 
-###Finally, Enjoy It!
+## Part II 平均绩点计算
 
-[link]: javascript:(function(){el=document.createElement('script');el.setAttribute('type','text/javascript');el.setAttribute('src','https://raw.githubusercontent.com/Rocket1184/fzjwHelper/master/kcpj.js');document.body.appendChild(el);})();
+1. 将下面的 `代码` 作为 `网址` 添加到书签。
+
+	```JavaScript
+	javascript: (function() {
+		var el = document.createElement('script');
+		el.setAttribute('type', 'text/javascript');
+		el.setAttribute('src','https://rawgit.com/Rocket1184/fzjwHelper/master/pjjd.js');
+		document.body.appendChild(el);
+	})();
+	```
+
+2. 打开 `方正教务系统` ，进入 `成绩查询` 页面。
+
+3. 点击刚刚添加的书签。
+
+### 说明：
+
+平均绩点会显示在表格的大标题后面，你肯定一眼就会发现自己~~惨不忍睹~~的绩点 = =
+
+每一科的绩点会单独展示，原列表中的 `成绩` 项会变为 `成绩/绩点` 。
+
+在老师给分为等级而不是分数时，对照表如下：
+
+|等级|绩点|
+|:-:|:-:|
+|优秀|5.0|
+|良好|4.0|
+|中等|3.0|
+|合格|2.0|
+|“其他情况”|0.0|
