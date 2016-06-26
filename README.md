@@ -84,7 +84,7 @@
 - [x] 评教
 - [x] 绩点计算
 - [ ] 培养计划
-- To be added....
+- [ ] To be added....
 
 #### 浏览器插件
 - [ ] Chrome
