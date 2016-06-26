@@ -7,7 +7,8 @@ function Rooster() {
 	}
 	else if (ua.indexOf("Chrome") > 0) {
 		console.log("chrome detected!");
-		alert("Chrome 用户，请点击 “确定” 以开启 Rampage 模式！");
+		// Chrome 用户，请点击 “确定” 以开启 Rampage 模式！
+		alert("\u0043\u0068\u0072\u006f\u006d\u0065\u0020\u7528\u6237\uff0c\u8bf7\u70b9\u51fb\u0020\u201c\u786e\u5b9a\u201d\u0020\u4ee5\u5f00\u542f\u0020\u0052\u0061\u006d\u0070\u0061\u0067\u0065\u0020\u6a21\u5f0f\uff01");
 		Rampage();
 		return;
 	}
@@ -19,13 +20,13 @@ function CreateBtn() {
 	var btnGood = document.createElement("button");
 	
 	btnGood.classList.add("button");
-	btnGood.innerText = "好评";
+	btnGood.innerText = "\u597d\u8bc4"; // 好评
 	var btnMid = btnGood.cloneNode(true);
-	btnMid.innerText = "中评";
+	btnMid.innerText = "\u4e2d\u8bc4";  //中评
 	var btnBad = btnGood.cloneNode(true);
-	btnBad.innerText = "差评";
+	btnBad.innerText = "\u5dee\u8bc4";  //差评
 	var btnRand = btnGood.cloneNode(true);
-	btnRand.innerText = "看脸";
+	btnRand.innerText = "\u770b\u8138";  //看脸
 
 	btnGood.onclick = function () {
 		FirstBlood("goodMan");

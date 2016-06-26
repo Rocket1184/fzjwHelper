@@ -7,6 +7,18 @@ function CreateMenuItem(name, href) {
 	return res;
 }
 
+function InjectScriptElement(name) {
+	var url = chrome.extension.getURL('Script/' + name + '.js');
+	var el = document.createElement('script');
+	el.setAttribute('type', 'text/javascript');
+	el.setAttribute('src', url);
+	el.id = name;
+	document.body.appendChild(el);
+}
+
+InjectScriptElement('kcpj');
+InjectScriptElement('pjjd');
+
 var navBar = document.getElementsByClassName('nav')[0];
 var menuTag = document.createElement('li');
 menuTag.innerHTML = '<a href="#a" class="top_link"><span class="down">教务助手</span></a>';
@@ -24,5 +36,3 @@ menu.appendChild(pjjd);
 menuTag.appendChild(menu);
 
 navBar.appendChild(menuTag);
-
-DelEmptyLi();
