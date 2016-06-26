@@ -24,7 +24,7 @@ function CalcGPAAll() {
 	var iframe = document.getElementById('iframeautoheight').contentDocument;
 	var tbody = iframe.getElementsByTagName('tbody')[1];
 
-	if (tbody.rows[0].cells[7].innerText.indexOf('绩点')) return;
+	if (tbody.rows[0].cells[7].innerText.indexOf('/') > 0) return;
 	tbody.rows[0].cells[7].innerText += ' / 绩点';
 
 	var gpa = 0;
