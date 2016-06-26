@@ -17,7 +17,7 @@ function ExecuteFunction(fn) {
 
 function AddOrDo(name) {
 	var hasCreated = document.getElementById(name);
-	if (hasCreated.length) {
+	if (hasCreated === null) {
 		var el = document.createElement('script');
 		el.id = name;
 		el.setAttribute('type', 'text/javascript');
