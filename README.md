@@ -87,5 +87,5 @@
 - [ ] To be added....
 
 #### 浏览器插件
-- [ ] Chrome
+- [x] Chrome
 - [ ] Firefox
