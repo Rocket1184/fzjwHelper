@@ -12,7 +12,7 @@
 				"http://jxgl.hdu.edu.cn/*",
 				"http://jxglteacher.hdu.edu.cn/*"
 			],
-			"js": ["CreateMenu.js","Script/kcpj.js","Script/pjjd.js"]
+			"js": ["CreateMenu.js","Script/DelEmptyLi.js","Script/kcpj.js","Script/pjjd.js"]
 		}
 	]
 }

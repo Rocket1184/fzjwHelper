@@ -44,9 +44,3 @@ function CalcGPAAll() {
 	var title = iframe.getElementById('tbXsxx').rows[0].cells[0];
 	title.innerText += '   平均绩点:' + gpa.toFixed(3);
 }
-
-function pjjd() {
-	CalcGPAAll();
-}
-
-CalcGPAAll();

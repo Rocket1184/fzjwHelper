@@ -130,9 +130,3 @@ function Rampage(type) {
 		}
 	}, 600);
 }
-
-function kcpj() {
-	Rooster();
-}
-
-Rooster();
