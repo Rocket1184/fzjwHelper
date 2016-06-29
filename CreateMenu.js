@@ -8,12 +8,17 @@ function CreateMenuItem(name, href) {
 }
 
 function InjectScriptElement(name) {
-	var url = chrome.extension.getURL('Script/' + name + '.js');
+	try {
+		var url = chrome.extension.getURL('Script/' + name + '.js');
+	} catch (error) {
+		var url = 'https://rawgit.com/Rocket1184/fzjwHelper/master/Script/' + name + '.js';
+	}
 	var el = document.createElement('script');
 	el.setAttribute('type', 'text/javascript');
 	el.setAttribute('src', url);
 	el.id = name;
 	document.body.appendChild(el);
+
 }
 
 InjectScriptElement('kcpj');
