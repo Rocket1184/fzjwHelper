@@ -11,6 +11,15 @@ function InjectScriptElement(name) {
 	try {
 		var url = chrome.extension.getURL('Script/' + name + '.js');
 	} catch (error) {
+		try {
+			document.getElementById('DelEmptyLi').id.length;
+		} catch (error) {
+			var del = document.createElement('script');
+			del.setAttribute('type', 'text/javascript');
+			del.setAttribute('src', 'https://rawgit.com/Rocket1184/fzjwHelper/master/Script/DelEmptyLi.js');
+			del.id = ('DelEmptyLi');
+			document.body.appendChild(del);
+		}
 		var url = 'https://rawgit.com/Rocket1184/fzjwHelper/master/Script/' + name + '.js';
 	}
 	var el = document.createElement('script');
@@ -18,7 +27,6 @@ function InjectScriptElement(name) {
 	el.setAttribute('src', url);
 	el.id = name;
 	document.body.appendChild(el);
-
 }
 
 InjectScriptElement('kcpj');
