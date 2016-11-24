@@ -40,7 +40,7 @@ menuTag.className = 'top';
 var menu = document.createElement('ul');
 menu.className = 'sub';
 
-var kcpj = CreateMenuItem('课程评价', 'javascript:Rooster();');
+var kcpj = CreateMenuItem('课程评价', 'javascript:CreateBtn();');
 var pjjd = CreateMenuItem('绩点计算', 'javascript:CalcGPAAll();');
 
 menu.appendChild(kcpj);
