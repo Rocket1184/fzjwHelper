@@ -1,47 +1,7 @@
 var iframeEl = document.getElementsByTagName('iframe')[0];
 iframeEl.addEventListener('load', CreateBtn);
 
-function CreateBtn() {
-    var btnGood = document.createElement('button');
-
-    btnGood.classList.add('button');
-    btnGood.innerText = '\u597d\u8bc4'; // 好评
-    var btnMid = btnGood.cloneNode(true);
-    btnMid.innerText = '\u4e2d\u8bc4'; //中评
-    var btnBad = btnGood.cloneNode(true);
-    btnBad.innerText = '\u5dee\u8bc4'; //差评
-    var btnRand = btnGood.cloneNode(true);
-    btnRand.innerText = '\u770b\u8138'; //看脸
-
-    btnGood.onclick = function () {
-        FirstBlood('goodMan');
-        DoubleKill();
-    };
-    btnMid.onclick = function () {
-        FirstBlood('justSoSo');
-        DoubleKill();
-    };
-    btnBad.onclick = function () {
-        FirstBlood('badApple');
-        DoubleKill();
-    };
-    btnRand.onclick = function () {
-        FirstBlood('whatTheFxxk');
-        DoubleKill();
-    };
-
-    var bn1 = iframeEl.contentDocument.getElementById('Button1');
-    var frag = document.createDocumentFragment();
-
-    frag.appendChild(btnGood);
-    frag.appendChild(btnMid);
-    frag.appendChild(btnBad);
-    frag.appendChild(btnRand);
-
-    bn1.parentElement.appendChild(frag);
-}
-
-function FirstBlood(type) {
+function DoEvaluate(type) {
     var select = iframeEl.contentDocument.getElementsByTagName('select');
     var randMulti = 233;
     var randMod = 3;
@@ -86,30 +46,62 @@ function FirstBlood(type) {
                 break;
         }
     }
-}
 
-function DoubleKill() {
     iframeEl.contentDocument.getElementById('Button1').click();
 }
- 
+
+function CreateBtn() {
+    var btnGood = document.createElement('button');
+
+    btnGood.classList.add('button');
+    btnGood.innerText = '\u597d\u8bc4'; // 好评
+    var btnMid = btnGood.cloneNode(true);
+    btnMid.innerText = '\u4e2d\u8bc4'; // 中评
+    var btnBad = btnGood.cloneNode(true);
+    btnBad.innerText = '\u5dee\u8bc4'; // 差评
+    var btnRand = btnGood.cloneNode(true);
+    btnRand.innerText = '\u770b\u8138'; // 看脸
+
+    btnGood.onclick = function () {
+        DoEvaluate('goodMan');
+    };
+    btnMid.onclick = function () {
+        DoEvaluate('justSoSo');
+    };
+    btnBad.onclick = function () {
+        DoEvaluate('badApple');
+    };
+    btnRand.onclick = function () {
+        DoEvaluate('whatTheFxxk');
+    };
+
+    var bn1 = iframeEl.contentDocument.getElementById('Button1');
+    var frag = document.createDocumentFragment();
+
+    frag.appendChild(btnGood);
+    frag.appendChild(btnMid);
+    frag.appendChild(btnBad);
+    frag.appendChild(btnRand);
+
+    bn1.parentElement.appendChild(frag);
+}
+
 function Rampage() {
     var select = iframeEl.contentDocument.getElementById('pjkc');
     var kill = select.selectedIndex;
     var HolyShit = select.options.length;
 
     function UnStoppable() {
-        FirstBlood('justSoSo');
-        DoubleKill();
+        DoEvaluate('justSoSo');
         kill++;
         console.log(kill, 'players multi kill!');
         if (kill >= HolyShit) {
             iframeEl.removeEventListener('load', UnStoppable);
-			alert('Holy Shit!');
+            alert('Holy Shit!');
         }
     };
 
-	FirstBlood();
-	DoubleKill();
+    DoEvaluate();
 
     iframeEl.addEventListener('load', UnStoppable);
 }
