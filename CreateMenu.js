@@ -1,3 +1,13 @@
+var baseURL = 'https://rawgit.com/Rocket1184/fzjwHelper/master/Script/';
+
+var navBar = document.getElementsByClassName('nav')[0];
+var menuTag = document.createElement('li');
+menuTag.innerHTML = '<a href="#a" class="top_link"><span class="down">教务助手</span></a>';
+menuTag.className = 'top';
+
+var menu = document.createElement('ul');
+menu.className = 'sub';
+
 function CreateMenuItem(name, href) {
     var res = document.createElement('li');
     var item = document.createElement('a');
@@ -16,11 +26,11 @@ function InjectScriptElement(name) {
         } catch (error) {
             var del = document.createElement('script');
             del.setAttribute('type', 'text/javascript');
-            del.setAttribute('src', 'https://rawgit.com/Rocket1184/fzjwHelper/master/Script/DelEmptyLi.js');
+            del.setAttribute('src', baseURL + 'DelEmptyLi.js');
             del.id = ('DelEmptyLi');
             document.body.appendChild(del);
         }
-        var url = 'https://rawgit.com/Rocket1184/fzjwHelper/master/Script/' + name + '.js';
+        var url = baseURL + name + '.js';
     }
     var el = document.createElement('script');
     el.setAttribute('type', 'text/javascript');
@@ -29,22 +39,15 @@ function InjectScriptElement(name) {
     document.body.appendChild(el);
 }
 
-InjectScriptElement('kcpj');
-InjectScriptElement('pjjd');
+function RegisterMenuEntry(name, scriptName, functionName) {
+    InjectScriptElement(scriptName);
+    var menuItemElem = CreateMenuItem(name, 'javascript:' + functionName + '()');
+    menu.appendChild(menuItemElem);
+}
 
-var navBar = document.getElementsByClassName('nav')[0];
-var menuTag = document.createElement('li');
-menuTag.innerHTML = '<a href="#a" class="top_link"><span class="down">教务助手</span></a>';
-menuTag.className = 'top';
-
-var menu = document.createElement('ul');
-menu.className = 'sub';
-
-var kcpj = CreateMenuItem('课程评价', 'javascript:CreateBtn();');
-var pjjd = CreateMenuItem('绩点计算', 'javascript:CalcGPAAll();');
-
-menu.appendChild(kcpj);
-menu.appendChild(pjjd);
+RegisterMenuEntry('课程评价', 'kcpj', 'CreateBtn');
+RegisterMenuEntry('平均绩点', 'pjjd', 'CalcGPAAll');
+RegisterMenuEntry('已选学分', 'yxxf', 'CalcCreditAll');
 
 menuTag.appendChild(menu);
 

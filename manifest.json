@@ -1,6 +1,6 @@
 {
 	"name": "方正教务助手",
-	"version": "0.7.5",
+	"version": "0.8.0",
 	"manifest_version": 2,
 	"description": "让繁琐的 正方教务系统 更易于使用。",
 	"icons": {
@@ -15,7 +15,8 @@
 			"js": [
 				"CreateMenu.js",
 				"Script/kcpj.js",
-				"Script/pjjd.js"
+				"Script/pjjd.js",
+				"Script/yxxf.js"
 			]
 		},
 		{
@@ -32,6 +33,7 @@
 	"web_accessible_resources": [
 		"Script/DelEmptyLi.js",
 		"Script/kcpj.js",
-		"Script/pjjd.js"
+		"Script/pjjd.js",
+		"Script/yxxf.js"
 	]
 }
