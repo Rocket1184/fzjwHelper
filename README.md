@@ -3,9 +3,7 @@
 
 ## Chrome 系浏览器
 
-~~Chrome 拓展新鲜出炉，只需下载 [crx 文件](Bin/fzjwHelper.crx) ，并安装到浏览器即可无缝使用助手的全部功能～～~~
-
-> 脚本已经更新，但是chrome拓展还没有重新打包
+Chrome 拓展新鲜出炉，只需下载 [crx 文件](Bin/fzjwHelper.crx) ，并安装到浏览器即可无缝使用助手的全部功能～～
 
 ## Firefox
 

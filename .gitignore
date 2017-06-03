@@ -1,2 +1,3 @@
 fzjwHelper.pem
-Bin/fzjwHelper.zip
+Bin/**
+!Bin/fzjwHelper.crx
