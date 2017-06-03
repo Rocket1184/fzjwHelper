@@ -51,6 +51,10 @@ function DoEvaluate(type) {
 }
 
 function CreateBtn() {
+    var bn1 = iframeEl.contentDocument.getElementById('Button1');
+    if (!bn1) return;
+    var frag = document.createDocumentFragment();
+
     var btnGood = document.createElement('button');
 
     btnGood.classList.add('button');
@@ -74,9 +78,6 @@ function CreateBtn() {
     btnRand.onclick = function () {
         DoEvaluate('whatTheFxxk');
     };
-
-    var bn1 = iframeEl.contentDocument.getElementById('Button1');
-    var frag = document.createDocumentFragment();
 
     frag.appendChild(btnGood);
     frag.appendChild(btnMid);
